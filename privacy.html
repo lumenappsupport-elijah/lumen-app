@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Lumen — Privacy Policy</title>
+<meta name="description" content="How Lumen handles your dreams, your data, and your privacy." />
+<style>
+:root {
+  --ink: #F5EFE2;
+  --ink-soft: rgba(245, 239, 226, 0.72);
+  --ink-faint: rgba(245, 239, 226, 0.48);
+  --gold: #E9C77B;
+  --aurora: #7BE0B6;
+  --violet: #6B5BD2;
+  --navy: #0B0A1F;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(245, 239, 226, 0.10);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--navy); color: var(--ink); }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(123, 224, 182, 0.18), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 30%, rgba(107, 91, 210, 0.28), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 10% 80%, rgba(233, 199, 123, 0.10), transparent 60%),
+    linear-gradient(180deg, #0B0A1F 0%, #14102E 50%, #0B0A1F 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+/* drifting stars */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 70% 60%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1.5px 1.5px at 40% 80%, rgba(233,199,123,0.7), transparent),
+    radial-gradient(1px 1px at 85% 15%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 10% 65%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 55% 25%, rgba(123,224,182,0.6), transparent),
+    radial-gradient(1px 1px at 30% 50%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 90% 90%, rgba(255,255,255,0.6), transparent);
+  background-size: 100% 100%;
+  animation: drift 120s linear infinite;
+  opacity: 0.7;
+}
+body::after {
+  animation-duration: 200s;
+  animation-direction: reverse;
+  opacity: 0.4;
+}
+@keyframes drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-40px); }
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 28px 120px;
+  position: relative;
+  z-index: 1;
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+h1 {
+  font-family: "New York", "Iowan Old Style", "Georgia", serif;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.updated {
+  color: var(--ink-faint);
+  font-size: 14px;
+  margin: 0 0 48px;
+}
+h2 {
+  font-family: "New York", "Iowan Old Style", "Georgia", serif;
+  font-weight: 400;
+  font-size: 26px;
+  margin: 48px 0 14px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--aurora);
+  margin: 28px 0 10px;
+}
+p, li { color: var(--ink-soft); }
+strong { color: var(--ink); font-weight: 600; }
+a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(233,199,123,0.35); }
+a:hover { border-bottom-color: var(--gold); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 24px 26px;
+  margin: 24px 0;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.card p:last-child { margin-bottom: 0; }
+
+.footer {
+  margin-top: 80px;
+  padding-top: 28px;
+  border-top: 1px solid var(--card-border);
+  color: var(--ink-faint);
+  font-size: 14px;
+  text-align: center;
+}
+.crescent {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 65% 40%, var(--gold) 0%, var(--gold) 38%, transparent 39%);
+  vertical-align: -5px;
+  margin-right: 8px;
+  filter: drop-shadow(0 0 8px rgba(233,199,123,0.4));
+}
+@media (max-width: 540px) {
+  main { padding: 56px 22px 100px; }
+  h1 { font-size: 34px; }
+  h2 { font-size: 22px; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow"><span class="crescent"></span>Lumen</p>
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: May 27, 2026</p>
+
+<div class="card">
+  <p>Lumen is a private dream journal. Your dreams are yours. This page explains exactly what we collect, why, and what we never do.</p>
+</div>
+
+<h2>The short version</h2>
+<ul>
+  <li><strong>Your dreams stay on your device.</strong> They are stored locally and never uploaded to our servers.</li>
+  <li>We collect your <strong>name and email</strong> only when you sign in with Apple or Google, so we can recognize you.</li>
+  <li>When you tap <strong>Read this dream</strong>, that dream's text is sent to an AI service to generate an interpretation. It is not stored on our servers afterward.</li>
+  <li>We <strong>do not sell your data</strong>. We <strong>do not track you</strong> across other apps or the web.</li>
+</ul>
+
+<h2>What we collect</h2>
+
+<h3>Account information</h3>
+<p>When you sign in with <strong>Apple</strong> or <strong>Google</strong>, we receive a stable user ID, your name, and your email address. This is used solely to identify your account on this device. You may use Apple's "Hide My Email" feature, in which case we only see a relay address.</p>
+
+<h3>Your dreams</h3>
+<p>Dream entries — including titles, text, voice transcriptions, tags, moods, and generated dream-art — are stored <strong>locally on your device</strong> using Apple's SwiftData framework. They are not uploaded, backed up to our servers, or shared with anyone.</p>
+
+<h3>Voice recordings</h3>
+<p>When you record a dream with your voice, the audio is transcribed on-device using Apple's Speech framework whenever possible. The audio itself is not saved after transcription completes.</p>
+
+<h3>Purchases</h3>
+<p>Lumen Pro subscriptions are processed by Apple and tracked by <strong>RevenueCat</strong>, our subscription provider. RevenueCat receives an anonymous user identifier and your purchase history to determine whether you have an active subscription. See <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat's privacy policy</a>.</p>
+
+<h2>AI dream interpretation</h2>
+<p>When you tap <strong>Read this dream</strong>, the text of that single dream is sent through our Cloudflare Worker to an AI provider (Anthropic, OpenAI, or Google) to generate a poetic interpretation. The request is not associated with your name or email, and the dream text is not retained by Lumen after the response is returned. The interpretation is then saved on your device alongside the dream so you can read it again offline.</p>
+
+<h2>Notifications</h2>
+<p>If you opt in, Lumen may send local notifications for morning dream recall, weekly dream letters, and recurring symbol unlocks. These are scheduled on your device — we do not send remote push notifications.</p>
+
+<h2>What we do <em>not</em> do</h2>
+<ul>
+  <li>We do not sell your data to anyone, ever.</li>
+  <li>We do not track you across other apps or websites.</li>
+  <li>We do not use third-party analytics or advertising SDKs.</li>
+  <li>We do not store your dreams on our servers.</li>
+  <li>We do not read, review, or analyze your dreams except to send the specific dream you ask us to interpret to an AI provider.</li>
+</ul>
+
+<h2>Your choices</h2>
+<ul>
+  <li><strong>Delete a dream</strong> — swipe any dream in the Library to remove it instantly from your device.</li>
+  <li><strong>Sign out</strong> — Settings → Sign Out. This clears your credential from this device.</li>
+  <li><strong>Delete your account</strong> — Settings → Delete Account. This permanently erases every dream, every interpretation, and every preference from your device, along with your sign-in credential.</li>
+  <li><strong>Revoke Sign in with Apple</strong> — iOS Settings → your name → Sign in with Apple → Lumen → Stop Using Apple ID.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Lumen is not directed at children under 13. We do not knowingly collect information from anyone under 13.</p>
+
+<h2>Changes to this policy</h2>
+<p>If we make material changes, we'll update the "Last updated" date at the top of this page and, where appropriate, notify you inside the app.</p>
+
+<h2>Contact</h2>
+<p>Questions, requests, or concerns: <a href="mailto:lumenappsupport@gmail.com">lumenappsupport@gmail.com</a></p>
+
+<div class="footer">
+  <p>Lumen · A cosmic dream journal</p>
+</div>
+</main>
+</body>
+</html>
