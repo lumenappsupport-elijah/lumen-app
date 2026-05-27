@@ -1,56 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Lumen — Support</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Lumen Support</title>
+<meta name="description" content="Support for Lumen — a cosmic dream journal for iOS." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
-:root { --bg:#0a0a2e; --ink:#f5f0e6; --gold:#d4af37; }
-*{box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;
-     background:radial-gradient(ellipse at top,#1a1442 0%,var(--bg) 60%);
-     color:var(--ink);margin:0;line-height:1.7;min-height:100vh}
-.wrap{max-width:680px;margin:0 auto;padding:80px 28px 120px}
-h1{font-family:Georgia,serif;font-weight:300;font-size:40px;color:var(--gold);margin:0 0 8px}
-h2{font-family:Georgia,serif;font-weight:400;color:var(--gold);margin-top:40px;font-size:20px}
-a{color:var(--gold)}
-.card{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.2);
-      border-radius:14px;padding:20px 24px;margin-top:16px}
-.footer{margin-top:64px;opacity:.5;font-size:13px}
+:root {
+  --navy: #0a0820;
+  --navy-2: #150b34;
+  --violet: #2a1758;
+  --ivory: #f4ecd8;
+  --ivory-dim: rgba(244, 236, 216, 0.72);
+  --gold: #e6c277;
+  --aurora: #7be0c0;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(244, 236, 216, 0.12);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ivory);
+  background: radial-gradient(ellipse at 20% 0%, #3a1e7a 0%, var(--navy-2) 35%, var(--navy) 70%);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+/* Starfield */
+.stars, .stars::before, .stars::after {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+}
+.stars {
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 70% 80%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 40% 50%, #fff, transparent),
+    radial-gradient(1px 1px at 90% 20%, #fff, transparent),
+    radial-gradient(1px 1px at 10% 70%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 55% 15%, #fff, transparent),
+    radial-gradient(1px 1px at 85% 60%, #fff, transparent),
+    radial-gradient(1px 1px at 30% 90%, #fff, transparent);
+  background-size: 800px 800px;
+  opacity: 0.5;
+  animation: drift 120s linear infinite;
+}
+@keyframes drift {
+  from { background-position: 0 0; }
+  to { background-position: 800px 800px; }
+}
+/* Aurora wash */
+.aurora {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(60% 40% at 80% 10%, rgba(123, 224, 192, 0.12), transparent 60%),
+    radial-gradient(50% 35% at 10% 80%, rgba(230, 194, 119, 0.10), transparent 60%);
+  filter: blur(20px);
+}
+main { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+.brand {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 48px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+.brand-mark {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--gold) 0%, #c89a3f 60%, transparent 75%);
+  box-shadow: 0 0 24px rgba(230, 194, 119, 0.35);
+}
+h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(36px, 6vw, 52px);
+  line-height: 1.1;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+.lede {
+  font-size: 18px;
+  color: var(--ivory-dim);
+  margin: 0 0 48px;
+  max-width: 540px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 28px 28px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.card h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0 0 12px;
+  color: var(--gold);
+  letter-spacing: 0.01em;
+}
+.card p, .card li { color: var(--ivory-dim); font-size: 16px; margin: 0 0 10px; }
+.card ul { margin: 8px 0 0; padding-left: 20px; }
+a {
+  color: var(--aurora);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(123, 224, 192, 0.3);
+  transition: border-color 0.2s;
+}
+a:hover { border-bottom-color: var(--aurora); }
+.contact {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--ivory-dim);
+  font-size: 15px;
+}
+.contact a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--gold) 0%, #c89a3f 100%);
+  color: var(--navy);
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 8px 24px rgba(230, 194, 119, 0.25);
+}
+footer { text-align: center; color: rgba(244, 236, 216, 0.4); font-size: 13px; margin-top: 64px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>Support</h1>
-<p>We're here to help. Most questions get a reply within 24 hours.</p>
+<div class="stars"></div>
+<div class="aurora"></div>
+<main>
+  <div class="brand"><span class="brand-mark"></span> Lumen</div>
+  <h1>Support</h1>
+  <p class="lede">We're here to help you make Lumen feel like home for your dreams. Browse common questions below, or reach out anytime.</p>
 
-<div class="card">
-  <strong>Email:</strong> <a href="mailto:lumen.app.support@gmail.com?subject=Lumen%20Support">lumen.app.support@gmail.com</a>
-</div>
+  <div class="card">
+    <h2>Getting started</h2>
+    <p>Lumen guides you through a short onboarding to personalize your dream profile. When you're ready, tap the glowing orb on the Today screen to capture your first dream — by voice or by typing.</p>
+  </div>
 
-<h2>Common questions</h2>
+  <div class="card">
+    <h2>Recording dreams</h2>
+    <p>The orb opens a capture sheet with live transcription. You can also type, mark a dream as lucid, and add a mood tag. Dreams are stored privately on your device.</p>
+  </div>
 
-<p><strong>How do I restore my Pro subscription on a new device?</strong><br>
-Open Lumen → Settings → Restore Purchases. Sign in with the same Apple ID you used to subscribe.</p>
+  <div class="card">
+    <h2>Lumen Pro</h2>
+    <p>Pro unlocks AI-powered dream interpretation, unlimited entries, and deeper pattern insights.</p>
+    <ul>
+      <li>Manage or cancel anytime in <strong>Settings → Apple ID → Subscriptions</strong>.</li>
+      <li>Tap <strong>Restore Purchases</strong> in Lumen Settings if you've switched devices.</li>
+    </ul>
+  </div>
 
-<p><strong>How do I cancel my subscription?</strong><br>
-Subscriptions are managed by Apple. Open the iOS Settings app → tap your name → Subscriptions → Lumen → Cancel.</p>
+  <div class="card">
+    <h2>Privacy</h2>
+    <p>Your dreams live locally on your device in encrypted storage. Lumen never shares them. Sign-in providers (Apple, Google) are used only to identify your account.</p>
+  </div>
 
-<p><strong>My dream didn't save / interpretation failed.</strong><br>
-Check your internet connection and try again. If it keeps happening, email us with the date of the dream and we'll help.</p>
+  <div class="card">
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><strong>Voice not transcribing?</strong> Enable Speech Recognition + Microphone in iOS Settings → Lumen.</li>
+      <li><strong>Missing dreams?</strong> Dreams are tied to your device. Re-signing in restores onboarding state but not local entries.</li>
+      <li><strong>Notifications silent?</strong> Check Settings → Notifications → Lumen.</li>
+    </ul>
+  </div>
 
-<p><strong>Voice recording isn't working.</strong><br>
-Make sure Lumen has microphone permission: iOS Settings → Lumen → Microphone.</p>
+  <div class="contact">
+    Still need help?
+    <br/>
+    <a href="mailto:lumenappsupport@gmail.com">Email lumenappsupport@gmail.com</a>
+  </div>
 
-<p><strong>How do I delete my account?</strong><br>
-Open Lumen → Settings → Delete Account. This wipes your dreams and credentials from this device.</p>
-
-<h2>Legal</h2>
-<p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
-
-<p><a href="index.html">← Back to Lumen</a></p>
-
-<div class="footer">© 2026 Lumen</div>
-</div>
+  <footer>© Lumen · A cosmic dream journal</footer>
+</main>
 </body>
 </html>
